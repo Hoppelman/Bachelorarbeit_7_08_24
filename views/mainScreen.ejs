@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/css/mainScreen.css" rel="stylesheet">
+    <link href="/css/index_options.css" rel="stylesheet">
+    <link href="/css/book.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Zeyada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <title>Main Screen</title>
+</head>
+<body>
+    <!-- Startseite -->
+    <div id="index game" class = "startScreen">
+        <button id="unmuteButton">Unmute</button>
+    </div>
+
+    <div id="index game" class = "game startScreen" style="display: none">
+        <button id="startButton">Spiel starten</button>
+    </div>
+
+    <div id="options" class = "game">
+        <form id="startForm" action="/options" method="POST" target="hiddenIframe" style="display: none">
+            <label for="playerCount">Spieleranzahl: </label>
+            <input id = "playerCount" type="number" name="playerCount" required>
+            <br>
+            <label for="citizenCount">Dorfbewohner: </label>
+            <input id = "citizenCount" type="number" name="citizenCount" required>
+            <br>
+            <label for="werewolfCount">Werwölfe: </label>
+            <input id = "werewolfCount" type="number" name="werewolfCount" required>
+            <br>
+            <label for="seer">Seher: </label>
+            <input id = "seer" type="checkbox" name="seer" value="seer">
+            <br>
+            <label for="witch">Hexe: </label>
+            <input id = "witch" type="checkbox" name="witch" value = "witch">
+            <br>
+        </form>
+        <button id="submitButton" name="submitButton" form="startForm" style="display: none">Spiel erstellen</button>
+    </div>
+
+    <div id="QRCode" class = "game" style="display: none">
+        <h2>Scanne den Code um dem Spiel beizutreten</h2>
+        <br>
+        <img src="/images/mainScreen/QRCode.png">
+    </div>
+
+    <div id="hide-phone" class = "game" style="display: none">
+        <h2 class="center">Eure Rolle wird euch gleich auf euren Handys gezeigt,<br> verdeckt dieses gut!</h2>
+    </div>
+
+    <div id="look-roles" class = "game" style="display: none">
+        <h2 class="center">Merkt euch eure Rolle gut!<br>Drückt dann unten auf den "Verstanden"-Button.</h2>
+    </div>
+
+    <div id="video-container" class = "game startScreen" style="display: none">
+        <video id="fireplace" muted="muted" class="move-right">
+            <source src="/video/Fireplace_Void_Moon_Left_HD.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- BUCH-->
+
+    <!-- Kopciara, Przemysław. In: blog.avada (o.D.): [online] https://blog.avada.io/css/book-effects [abgerufen am 3.08.24] -->
+    <div class="game" id="book-wrapper">
+        <div class="book game" style="display: none" id="book">
+            <div id="pages" class="pages">
+                <div class="page"><h1>Die Werwölfe von <br><br>Düsterwald</h1></div>
+                <div class="page"><h2 class="entry-headline">13 April, Anno Domini 1480</h2><p class="gameIntro">Gegrüsst seid Ihr, geneigter Leser,<br><br>Mein Name ist Georg Peter Tenet, ein Gelehrter und Erforscher des Unbekannten, stets getrieben von der Neugierde, die Mysterien dieser Welt zu ergründen. <br><br> Meine Reisen führten mich in das entlegene Dorf Düsterwald, verborgen tief im finsteren Schwarzwald. Hier raunen die Dorfbewohner von schauerlichen Kreaturen, Werwölfen, die sich bei Tage als Menschen verbergen und des Nachts unschuldige Seelen verschlingen. <br><br>In diesem Tagebuch halte ich die Ereignisse und Beobachtungen während meines Aufenthaltes fest.</div>
+                <div class="page"><img class= "GPT" id = "GPTImage" src="/images/mainScreen/captain-gulliver.jpg"></div>
+                <div class="page"><h2 class="topic-headline">Die Umfrage</h2><p>Da ich noch voraussichtlich eine Weile in Düsterwald verbleiben werde, beschloss ich, mir einen Überblick über alle Einwohner zu verschaffen. So entschied ich mich, jeden Einwohner persönlich zu befragen und ihre Antworten auf einem Zettel festzuhalten. <br><br>Nicht nur wollte ich ihren Namen und ihr Alter erfahren, sondern sie sollten auch eine kurze Beschreibung zu sich selbst und ihrer Rolle im Dorfe abgeben. Vielleicht könnten diese Berichte gar einen Hinweis darauf geben, wer von ihnen ein dunkles Geheimnis verbirgt...</p></div>
+                <div class="page"></div> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Spiel startet -->
+
+
+
+    <div id="intro" class = "game" style="display: none">
+        <p id = "introText">Test Text</p>
+    </div>
+    <div id="morningEntry" class = "game" style="display: none">
+        <p id = "morningEntryText">Das Dorf wacht auf...</p>
+    </div>
+    <div id="sleepScreen" class = "game" style="display: none">
+        <p>Das Dorf schläft ein...</p>
+        <img src="/images/village/sleep/Night.jpg">
+    </div>
+    <div id="loadingScreen" class = "game" style="display: none">
+        <p>Lade...</p>
+    </div>
+
+
+    <div id="GameOutro" class = "game" style="display: none">
+        <h2>Danke fürs Mitspielen!</h2>
+    </div>
+
+    <script>
+        //Wird genutzt um 
+        document.getElementById("submitButton").addEventListener("click", (e) => {
+            e.preventDefault()
+
+            let form = document.getElementById("startForm")
+
+            data = new FormData(form)
+
+            fetch('/options', {
+                method: 'POST',
+                body: new URLSearchParams(data),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+        })
+    </script>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/js/mainScreen_modules/mainScreenPhaseStyle.js" charset="utf-8"></script> -->
+<script src="/js/mainScreen.js" charset="utf-8"></script>
+<script src="/js/index_options.js" charset="utf-8"></script>
+<script src="/js/mainScreen_modules/book.js" charset="utf-8"></script>
+<script src="/js/mainScreen_modules/mainScreen_GUI.js" charset="utf-8"></script>
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/mainScreen_modules/audio.js" charset="utf-8"></script>
+</html>

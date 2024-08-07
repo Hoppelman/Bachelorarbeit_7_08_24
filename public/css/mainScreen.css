@@ -1,0 +1,20 @@
+
+
+body {
+    background-color: #060606;
+}
+
+h2.center  {
+    color:#98291f;
+    margin: auto;
+    margin-top: 25%;
+}
+
+#GPTImage {
+    filter: grayscale(100%);
+}
+
+img {
+    opacity: 0.4;
+}
+

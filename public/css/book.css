@@ -1,0 +1,437 @@
+/* Kopciara, Przemysław. In: blog.avada (o.D.): [online] https://blog.avada.io/css/book-effects [abgerufen am 3.08.24] */
+
+  #book-wrapper {
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
+
+  .book {
+    min-height: 100%;
+    display: flex;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-inline: auto;
+
+    transition: opacity 0.4s 0.2s;
+  }
+
+  .book img.GPT{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+    height: 90%;
+  }
+
+  .book img.intro{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    filter: grayscale(80%);
+  }
+
+  .book img.sleep{
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+  }
+
+  .book img.nightR{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-right: auto;
+    object-fit: cover;
+  }
+
+  .book img.nightL{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-left: auto;
+    object-fit: cover;
+    transform: rotate(180deg);
+    /*opacity: 0.4;*/
+  }
+
+  .book img.citizen{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-left: auto;
+    object-fit: cover;
+    transform: rotate(180deg);
+    filter: grayscale(60%);
+    opacity: 0.3;
+  }
+
+  .book img.red {
+    filter:hue-rotate(-57deg);
+  }
+
+  .book img.blue {
+    filter:hue-rotate(-250deg);
+  }
+
+  .book img.green {
+    filter:hue-rotate(50deg);
+  }
+
+  .book img.dayR{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-right: auto;
+    object-fit: cover;
+  }
+
+  .book img.dayL{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-left: auto;
+    object-fit: cover;
+  }
+
+  .book img.role{
+    margin: auto;
+    margin-top: 15%;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    max-width: fit-content;
+    filter: grayscale(80%)
+  }
+
+  .book img.flipNight{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-right: auto;
+    object-fit: cover;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .book img.Night{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: 90%;
+    margin-right: auto;
+    object-fit: cover;
+  }
+
+
+ .book p{
+    /*font-family: 'Lovers Quarrel', cursive;*/
+    font-family: "Zeyada", cursive; /*Quelle:https://fonts.google.com/selection/embed */
+    font-family: "Homemade Apple", cursive;
+    font-family: "Allison", cursive;
+    margin-top: 0vw;
+    margin-inline: 5%;
+    text-align: justify;
+    font-size: 2.8vw;
+    line-height: 1.8vw;
+    color: #000000a8;
+  }
+
+  .book p.right{ /*ME*/
+    margin-top: 2vw;
+  }
+
+  .book p.gameIntro {
+    font-size: 2.6vw;
+    line-height: 1.7vw;
+  }
+
+  .book h1{/*Von mir*/
+    font-family: 'Lovers Quarrel', cursive;
+    /*font-family: "Zeyada", cursive;*/ /*Quelle:https://fonts.google.com/selection/embed */
+    /*font-family: "Homemade Apple", cursive;*/
+    margin-top: 8vw;
+    text-align: center;
+    font-size: 3vw;
+    color: #000000c0;
+  }
+
+  h2.entry-headline{/*Von mir*/
+    font-family: "Allison", cursive;
+    /*font-family: "Zeyada", cursive;*/ /*Quelle:https://fonts.google.com/selection/embed */
+    /*font-family: "Homemade Apple", cursive;*/
+    margin-top: 3vw;
+    margin-left: 5%;
+    margin-bottom: 1.3vw;
+    text-decoration:underline;
+    text-underline-position:under;
+    text-decoration-color:#000000e4;
+    text-align: left;
+    font-size: 2.4vw;
+    color: #000000e4;
+  }
+
+  h2.topic-headline{/*Von mir*/
+    font-family: "Allison", cursive;
+    /*font-family: "Zeyada", cursive;*/ /*Quelle:https://fonts.google.com/selection/embed */
+    /*font-family: "Homemade Apple", cursive;*/
+    margin-top: 3vw;
+    margin-left: 5%;
+    margin-bottom: 1.3vw;
+    /*text-decoration:underline;
+    text-underline-position:under;
+    text-decoration-color:#000000e4;*/
+    text-align: center;
+    font-size: 4.4vw;
+    color: #000000f4;
+  }
+
+  h2.transition{/*Von mir*/
+    font-family: "Allison", cursive;
+    /*font-family: "Zeyada", cursive;*/ /*Quelle:https://fonts.google.com/selection/embed */
+    /*font-family: "Homemade Apple", cursive;*/
+    margin-top: 40%;
+    margin-left: 5%;
+    margin-bottom: auto;
+    text-decoration:underline;
+    text-underline-position:under;
+    text-decoration-color:#000000e4;
+    text-align: canter;
+    font-size: 4.5vw;
+    color: #000000e4;
+  }
+
+  /*.page {
+    width: 40vw;
+    height: 44vw;
+    background-color: #111111;
+    float: left;
+    margin-bottom: 0.5em;
+    background: left top no-repeat;
+    background-size: cover;
+  }
+  .page:nth-child(even) {
+    clear: both;
+  }*/
+  .book {
+    perspective: 250vw;
+  }
+  .book .pages {
+    width: 70vw;
+    height: 44vw;
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+  }
+  
+  .book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 35vw;
+    height: 100%;
+    transform-origin: 0 0;
+    transition: transform 1.4s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
+    background-color: #ffbf86;
+  }
+  .book .page:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.7s;
+    z-index: 2;
+  }
+  .book .page:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,.15) 0%, rgba(0,0,0,0) 10%);
+    background-image: url("/images/MainScreen/PaperBackground.jpg");/*Abgeändert*/
+    background-size: cover;/*Abgeändert*/
+  }
+  .book .page:nth-child(odd):hover {
+    transform: rotateY(-15deg);
+  }
+  .book .page:nth-child(odd):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .book .page:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    border-color: black;
+    background-image: linear-gradient(to left, rgba(0,0,0,.12) 0%, rgba(0,0,0,0) 10%);
+    background-image: url("/images/MainScreen/PaperBackground.jpg");/*Abgeändert*/
+    background-size: cover;/*Abgeändert*/
+  }
+  .book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.grabbing {
+    transition: none;
+  }
+  .book .page.flipped:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+  }
+  .book .page.flipped:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.flipped:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+  }
+  .book .page.flipped:nth-child(even):hover {
+    transform: rotateY(15deg);
+  }
+  .book .page.flipped:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page.flipped:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  *,
+  * :before,
+  *:after {
+    box-sizing: border-box;
+  }
+  /*html,
+  body {
+    font-family: 'Lovers Quarrel', cursive;
+    background: #333;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  */
+  html {
+    height: 100%;
+  }
+  body {
+    
+  }
+  .page:nth-child(odd){
+    background-position: right top;
+  }
+
+  .body-center {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    line-height: 1.5em;
+  }
+
+
+  .book {
+    transition: background-color 0.7s;
+  }
+
+  .book.night {
+    filter:grayscale(70%);
+  }
+
+  body.night::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(1, 1, 1, 0.696);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.book.werewolf {
+  filter:grayscale(70%);
+}
+
+body.werewolf::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(24, 2, 2, 0.701);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.book.seer {
+  filter:grayscale(70%);
+}
+
+body.seer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(16, 2, 22, 0.599);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.book.witch {
+  filter:grayscale(70%);
+}
+
+body.witch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(2, 20, 11, 0.654);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.book.allDeadEnd {
+  filter:grayscale(100%);
+}
+
+.book.werewolfEnd {
+  filter:grayscale(60%);
+}
+
+body.werewolfEnd::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(216, 24, 24, 0.234);
+  pointer-events: none;
+  z-index: 10;
+}
